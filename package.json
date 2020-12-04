@@ -1,0 +1,32 @@
+{
+  "name": "MyWallet-API",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monalice/MyWallet-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monalice/MyWallet-API/issues"
+  },
+  "homepage": "https://github.com/monalice/MyWallet-API#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jest": "^26.6.3",
+    "joi": "^17.3.0",
+    "nodemon": "^2.0.6",
+    "pg": "^8.5.1",
+    "string-strip-html": "^7.0.3",
+    "uuid": "^8.3.1"
+  }
+}
