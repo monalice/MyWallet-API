@@ -16,14 +16,10 @@ app.post('/sign-in', validateSignIn, async (req, res) => {
     try {
         const token = uuid.v4();
         const dbConfig = {
-            user: process.env.DB_USER,
-            password: process.env.DB_PASSWORD,
-            host: process.env.DB_HOST,
-            port: process.env.DB_PORT,
-            database: process.env.DB_DATABASE,
+            cennectionString: process.env.DATABASE_URL
         }
         const pool = new Pool(dbConfig);
-        await pool.query('INSERT INTO sessions (id, token) VALUES ($1, $2)', [id, token]);
+        await pool.query('INSERT INTO session (id, token) VALUES ($1, $2)', [id, token]);
 
         res.status(200).send(token, name);
     } catch {
