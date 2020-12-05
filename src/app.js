@@ -5,7 +5,7 @@ const uuid = require('uuid');
 const bcrypt = require ('bcrypt');
 const { Pool } = require('pg');
 
-const { validateSignUp, validateSignIn } = require('./controller/usersController');
+const { validateSignUp, validateSignIn } = require('./controller/userController');
 
 const app = express();
 app.use(express.json());
