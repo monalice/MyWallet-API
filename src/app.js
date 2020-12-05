@@ -30,11 +30,7 @@ app.post('/sign-in', validateSignIn, async (req, res) => {
 app.post('/sign-up', validateSignUp, async (req, res) => {
     const { name, email, password } = req.body;
     const dbConfig = {
-        user: process.env.DB_USER,
-        password: process.env.DB_PASSWORD,
-        host: process.env.DB_HOST,
-        port: process.env.DB_PORT,
-        database: process.env.DB_DATABASE,
+        cennectionString: process.env.DATABASE_URL
     }
     const pool = new Pool(dbConfig);
     const hash = bcrypt.hashSync(password, 12);
